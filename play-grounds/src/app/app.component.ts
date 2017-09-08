@@ -10,6 +10,5 @@ export class AppComponent {
 	constructor(private dataService: DataService){}
 
   ngOnInit(){
-  	console.log(this.dataService.cars)
-  }
+  	console.log(this.dataService.cars);  }
 }
