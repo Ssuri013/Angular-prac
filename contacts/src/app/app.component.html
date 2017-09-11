@@ -10,14 +10,7 @@
         <span class="badge">{{contact.name}}</span> {{contact.number}}
       </li>
     </ul>
- <div *ngIf="selectedContact">
-      <h2>{{selectedContact.name}} details!</h2>
-      <div><label>id: </label>{{selectedContact.number}}</div>
-      <div>
-        <label>name: </label>
-        <input [(ngModel)]="selectedContact.name" placeholder="name"/>
-      </div>
-    </div>
+ <app-contact-deatils [contact]='selectedContact'></app-contact-deatils>
 <!-- 
 <label>Name: </label> <input [(ngModel)]='contact.name' /></div>
 <div>
