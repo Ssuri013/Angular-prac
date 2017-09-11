@@ -7,6 +7,7 @@ import {DataService} from './data.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+	title = "shubham"; 
 	constructor(private dataService: DataService){}
 
   ngOnInit(){

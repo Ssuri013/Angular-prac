@@ -2,11 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-my-new-component',
-  template: `
-  	<h1>{{A}}</h1>
-  	<img src="{{A}}" />
-  	<h1>hi</h1>
-  `,
+  templateUrl: './my-new-component.component.html',
   styleUrls: ['./my-new-component.component.css']
 })
 export class MyNewComponentComponent implements OnInit {
