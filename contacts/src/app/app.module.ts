@@ -4,17 +4,38 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ContactDeatilsComponent } from './contact-deatils/contact-deatils.component';
+import { ContactInfoService} from './contact-info.service';
+import { ContactsComponent } from './contacts.component';
+
+import { RouterModule } from '@angular/router';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ContactDeatilsComponent
+    ContactDeatilsComponent,
+    ContactsComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    RouterModule.forRoot([
+    {
+    path: 'contacts',
+    component: ContactsComponent
+    },
+    {
+      path: 'dashboard',
+      component: DashboardComponent
+    },
+    {
+      path: 'detail/:id',
+      component: ContactDeatilsComponent
+    },
+    ])
   ],
-  providers: [],
+  providers: [ContactInfoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

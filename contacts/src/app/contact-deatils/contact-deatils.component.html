@@ -1,8 +1,9 @@
 <div *ngIf="contact">
       <h2>{{contact.name}} details!</h2>
-      <div><label>id: </label>{{contact.number}}</div>
-      <div>
-        <label>name: </label>
-        <input [(ngModel)]="contact.name" placeholder="name"/>
+      <label>Name: </label>
+      <input [(ngModel)]="contact.name" placeholder="name"/>
+      <div><label>Number: </label> <input [(ngModel)]="contact.number" />
       </div>
+      <button (click)="goBack()">Back</button>
     </div>
+    
