@@ -7,8 +7,8 @@ import { ContactDeatilsComponent } from './contact-deatils/contact-deatils.compo
 import { ContactInfoService} from './contact-info.service';
 import { ContactsComponent } from './contacts.component';
 
-import { RouterModule } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,20 +20,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
   imports: [
     BrowserModule,
     FormsModule,
-    RouterModule.forRoot([
-    {
-    path: 'contacts',
-    component: ContactsComponent
-    },
-    {
-      path: 'dashboard',
-      component: DashboardComponent
-    },
-    {
-      path: 'detail/:id',
-      component: ContactDeatilsComponent
-    },
-    ])
+    AppRoutingModule
+
   ],
   providers: [ContactInfoService],
   bootstrap: [AppComponent]

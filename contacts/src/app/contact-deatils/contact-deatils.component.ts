@@ -12,7 +12,7 @@ import 'rxjs/add/operator/switchMap';
   styleUrls: ['./contact-deatils.component.css']
 })
 export class ContactDeatilsComponent implements OnInit {
- @Input() contact: Contact;
+  contact: Contact;
 constructor(
   private contactInfoService: ContactInfoService,
   private route: ActivatedRoute,

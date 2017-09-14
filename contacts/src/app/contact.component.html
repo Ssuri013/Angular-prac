@@ -1,0 +1,23 @@
+<div align='center'>
+{{title}}
+</div>
+<div>
+<div>
+<ul class="contacts">
+      <li *ngFor="let contact of contacts"
+        [class.selected]= "contact === selectedContact"
+        (click)="onSelect(contact)">
+        <span class="badge">{{contact.name}}</span> {{contact.number}}
+      </li>
+    </ul>
+ <div *ngIf="selectedContact ">
+  <h2>
+    {{selectedContact.name | uppercase}} info display
+  </h2>
+  <button (click)="gotoDetail()">View Details</button>
+</div>
+<!--
+<label>Name: </label> <input [(ngModel)]='contact.name' /></div>
+<div>
+  <label>Phone No. </label><input [(ngModel)]='contact.number' />
+</div> -->
