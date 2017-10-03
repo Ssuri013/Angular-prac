@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 
@@ -19,6 +20,7 @@ export const firebaseConfig = {
     AppComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     AngularFireAuthModule,
     AngularFireDatabaseModule,
