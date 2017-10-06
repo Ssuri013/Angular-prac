@@ -18,7 +18,7 @@ export class MyDirDirective implements OnInit{
  ngOnInit(): void{
   this.infoService.getOpt(this.myId).then(
     opt => {
-      this.ele.nativeElement.textContent=opt.name;
+    //  this.ele.nativeElement.textContent=opt.name;
     //  this.ele.nativeElement.style.backgroundColor ="blue";
     }
   )

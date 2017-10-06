@@ -10,12 +10,21 @@ import { Opt } from '../../Opt';
 export class ListComponent implements OnInit {
 
   opts: Opt[] = [];
+  currOpt:Opt;
   constructor(private infoService: InfoService){
-
   }
+
   ngOnInit(): void{
     this.infoService.getOpts().then(opts => this.opts = opts);
+     this.currOpt = this.opts[0];
+  }
 
+  setCurrOpt(myid){
+    console.log(myid);
+  }
+  displayData(myopts){
+  //  this.currOpt = myopts;
+    console.log(this.currOpt.name);
   }
 
 }
