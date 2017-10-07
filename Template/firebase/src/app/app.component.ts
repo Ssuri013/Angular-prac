@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
+//firebase
 import { AngularFireModule} from 'angularfire2';
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
-
-
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { AuthProviders ,  } from 'angularfire2/auth';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
