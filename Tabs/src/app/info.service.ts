@@ -3,15 +3,18 @@ import { Opt } from './Opt';
 
 const OPTS: Opt[] = [{
   name: 'Services',
-  id: 1
+  id: 1,
+  routerLink: '/services'
 },
 {
-  name: 'Health',
-  id: 2
+  name: 'Cost',
+  id: 2,
+  routerLink: '/cost'
 },
 {
-  name: 'More',
-  id: 3
+  name: 'Usage',
+  id: 3,
+  routerLink: './usage'
 }
 ];
 
